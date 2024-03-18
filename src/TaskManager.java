@@ -2,11 +2,11 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-public class Main {
+public class TaskManager {
 
     private List<Task> taskList;
 
-    public Main() {
+    public TaskManager() {
         taskList = new ArrayList<>();
     }
 
@@ -49,5 +49,9 @@ public class Main {
 
         manager.returnTaskList(manager);
 
+        System.out.println("\nTask List after deletion:");
+        for (Task task : manager.getTaskList()) {
+            System.out.println(task);
+        }
     }
 }
